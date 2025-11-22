@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMA - Loja Oficial</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header style="position: relative; width: 100%; height: 350px; background: url('banner-bma.png') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center;">
+    <h1 style="font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5);">Brasil Mundo Avançado RP</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 20px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">Loja oficial da City BMA MTA Roleplay</p>
+    <a href="#loja" style="background-color: #ffcc00; color: #000; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s ease;">Entrar na Loja</a>
+
+    <!-- QR Code Pix com botão copiar -->
+    <div style="position: absolute; bottom: 20px; right: 20px; background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.3); text-align: center;">
+        <img id="qrHeader" src="https://api.qrserver.com/v1/create-qr-code/?data=39f5bed1-db88-4e86-94bf-81dd0b098f1b&size=150x150" alt="QR Code Pix" style="width:120px; height:120px; margin-bottom: 8px;">
+        <div>
+            <span id="pixKeyHeader" style="display:block; font-size: 0.9rem; margin-bottom:5px;">39f5bed1-db88-4e86-94bf-81dd0b098f1b</span>
+            <button onclick="copyPix('pixKeyHeader')" style="background-color:#ffcc00; border:none; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight: bold;">Copiar Pix</button>
+        </div>
+    </div>
+</header>
+
+<!-- MENU -->
+<nav>
+    <ul>
+        <li><a href="#loja">Loja</a></li>
+        <li><a href="#discord">Discord</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#pix">Comprar VIP</a></li>
+    </ul>
+</nav>
+
+<!-- LOJA -->
+<section id="loja">
+    <h2>Planos Disponíveis</h2>
+    <div class="cards" style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
+
+        <!-- VIP Bronze -->
+       <div class="card" style="flex:1 1 200px; max-width: 220px; padding:12px; font-size:0.9rem;">
+
+
+            <h3>VIP Bronze 🥉</h3>
+            <p><strong>R$ 25,00 (MENSAL)</strong></p>
+            <ul>
+                <li>Carro VIP - Uno</li>
+                <li>Pack de Armas</li>
+                <li>Skin VIP</li>
+            </ul>
+            <button onclick="buy('VIP Bronze', 25)">Comprar</button>
+        </div>
+
+        <!-- VIP Platina -->
+        <div class="card" style="flex:1 1 220px; padding:12px; font-size:0.9rem;">
+            <h3>VIP Platina 🥈</h3>
+            <p><strong>R$ 35,00 (MENSAL)</strong></p>
+            <ul>
+                <li>Carro VIP - Celta</li>
+                <li>Moto VIP - PCX</li>
+                <li>Vida 80%</li>
+                <li>Pack de Armas</li>
+                <li>Skin VIP (1)</li>
+                <li>Skin VIP (2)</li>
+            </ul>
+            <button onclick="buy('VIP Platina', 35)">Comprar</button>
+        </div>
+
+        <!-- VIP Diamante -->
+        <div class="card" style="flex:1 1 220px; padding:12px; font-size:0.9rem;">
+            <h3>VIP Diamante 💎</h3>
+            <p><strong>R$ 50,00 (MENSAL)</strong></p>
+            <ul>
+                <li>Carro VIP - Polo</li>
+                <li>Moto VIP - CBR1000</li>
+                <li>Vida 100%</li>
+                <li>Colete 50%</li>
+                <li>Pack de Armas (1)</li>
+                <li>Pack de Armas (2)</li>
+                <li>Skin VIP (1)</li>
+                <li>Skin VIP (2)</li>
+                <li>Skin VIP (3)</li>
+                <li>Carro Colorido</li>
+                <li>Farol Colorido</li>
+            </ul>
+            <button onclick="buy('VIP Diamante', 50)">Comprar</button>
+        </div>
+
+        <!-- VIP Rubi -->
+        <div class="card" style="flex:1 1 220px; padding:12px; font-size:0.9rem;">
+            <h3>VIP Rubi ♦️</h3>
+            <p><strong>R$ 70,00 (MENSAL)</strong></p>
+            <ul>
+                <li>Carro VIP - GTR R34</li>
+                <li>Moto VIP - R1</li>
+                <li>Vida 100%</li>
+                <li>Colete 100%</li>
+                <li>Pack de Armas (1)</li>
+                <li>Pack de Armas (2)</li>
+                <li>Pack de Armas (3)</li>
+                <li>Skin VIP (1)</li>
+                <li>Skin VIP (2)</li>
+                <li>Skin VIP (3)</li>
+                <li>Carro Colorido</li>
+                <li>Farol Colorido</li>
+                <li>Carro Blindado</li>
+            </ul>
+            <button onclick="buy('VIP Rubi', 70)">Comprar</button>
+        </div>
+
+        <!-- Crie sua Facção -->
+        <!-- Abrir Facção -->
+<div class="card" style="flex:1 1 300px; padding:12px; font-size:0.9rem;">
+    <h3>Abrir Facção 🔫</h3>
+    <p><strong>Plano R$ 49,90 (30 Dias)</strong></p>
+    <ul>
+        <li>1 Baú 1500kg</li>
+        <li>2 Skins da sua escolha</li>
+        <li>1 Carro compartilhado</li>
+        <li>1 Favela (Média)</li>
+    </ul>
+    <hr>
+    <p><strong>Adicionais:</strong></p>
+    <ul>
+        <li>Skin adicional R$ 15,00 (30 Dias)</li>
+        <li>Veículo Adicional R$ 20,00 (30 Dias)</li>
+        <li>Helicóptero R$ 30,00 (30 Dias)</li>
+        <li>Pack de M4 R$ 19,90 (Permanente)</li>
+        <li>Baú R$ 24,90 (Permanente)</li>
+    </ul>
+    <hr>
+    <p><strong>Troca de Mods:</strong></p>
+    <ul>
+        <li>Apenas a Favela R$ 19,90</li>
+        <li>Skins e Carros R$ 14,90</li>
+        <li>Nome e todos os mods R$ 22,90</li>
+        <li>Migrar de Fac para Corp R$ 25,00</li>
+    </ul>
+    <hr>
+    <p><strong>Métodos de Pagamento:</strong> Pix / QR Code</p>
+    <hr>
+    <p><strong>Peso máximo dos Mods (Descompactados):</strong></p>
+    <ul>
+        <li>Skin: 3MB Cada</li>
+        <li>Carro: 8MB Cada</li>
+        <li>Favela: 350KB</li>
+    </ul>
+    <hr>
+    <p><strong>Tempo útil de ativação:</strong> 30 Minutos à 2 Horas</p>
+    <p>Para ter os bens ativados no servidor basta efetuar o pagamento e em seguida chamar o @AvancadoMC com comprovante de pagamento.</p>
+    <button onclick="buy('Abrir Facção', 49.90)">Comprar</button>
+</div>
+
+
+        <!-- Crie sua Corporação -->
+        <!-- Abrir Corporação -->
+<div class="card" style="flex:1 1 300px; padding:12px; font-size:0.9rem;">
+    <h3>Abrir Corporação 🚨🚔</h3>
+    <p><strong>Plano R$ 30,00 (30 Dias)</strong></p>
+    <ul>
+        <li>2 Skins da sua escolha</li>
+        <li>1 VTR</li>
+        <li>1 Base</li>
+    </ul>
+    <hr>
+    <p><strong>Adicionais:</strong></p>
+    <ul>
+        <li>Skin Adicional R$ 15,00 (30 Dias)</li>
+        <li>Veículo Adicional R$ 20,00 (30 Dias)</li>
+        <li>Helicóptero R$ 30,00 (Permanente)</li>
+        <li>Bate-Ponto R$ 20,00 (Permanente)</li>
+    </ul>
+    <hr>
+    <p><strong>Troca de Mods:</strong></p>
+    <ul>
+        <li>Skins e VTR R$ 14,90</li>
+        <li>Nome e todos os mods R$ 22,90</li>
+        <li>Migrar de Corp para Fac R$ 25,00</li>
+    </ul>
+    <hr>
+    <p><strong>Métodos de Pagamento:</strong> Pix / QR Code</p>
+    <hr>
+    <p><strong>Peso máximo dos Mods (Descompactados):</strong></p>
+    <ul>
+        <li>Skin: 3MB Cada</li>
+        <li>VTR: 8MB Cada</li>
+        <li>Base: 200KB</li>
+    </ul>
+    <button onclick="buy('Abrir Corporação', 59.90)">Comprar</button>
+</div>
+
+
+    </div>
+</section>
+
+
+</section>
+
+<!-- PIX SECTION -->
+<section id="pix">
+    <h2>Pagamento via PIX</h2>
+    <p>Após selecionar um produto, o QR Code aparecerá aqui:</p>
+    <div id="qrBox" class="qr-box" style="text-align:center; margin-top:10px;">
+        <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?data=39f5bed1-db88-4e86-94bf-81dd0b098f1b&size=150x150" alt="QR Code PIX" style="width:150px; height:150px; margin-bottom:5px;">
+        <div>
+            <span id="pixKey" style="display:block; font-size: 1rem; margin-bottom:5px;">39f5bed1-db88-4e86-94bf-81dd0b098f1b</span>
+            <button onclick="copyPix('pixKey')" style="background-color:#ffcc00; border:none; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold;">Copiar Pix</button>
+        </div>
+    </div>
+</section>
+
+<!-- DISCORD -->
+<section id="discord">
+    <h2>Discord Oficial</h2>
+    <p>Entre na comunidade do servidor:</p>
+    <a href="https://discord.gg/p5WqdF9KaY" class="btn" target="_blank">Entrar no Discord</a>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Wats : <strong>11 9 1900-4197</strong>
+    <p>E-mail: <strong>contatobmamtarp@gmail.com
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 - BMA | Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function copyPix(id) {
+    const pixKey = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(pixKey).then(() => {
+        alert('Chave Pix copiada para a área de transferência!');
+    }).catch(() => {
+        alert('Erro ao copiar a chave Pix.');
+    });
+}
+
+// Atualiza QR Code e chave Pix para cada produto
+function buy(productName, price) {
+    alert("Você selecionou: " + productName);
+
+    // Chave Pix para todos os produtos
+    const pixKeys = {
+        "VIP Bronze": "39f5bed1-db88-4e86-94bf-81dd0b098f1b",
+        "VIP Platina": "39f5bed1-db88-4e86-94bf-81dd0b098f1b",
+        "VIP Diamante": "39f5bed1-db88-4e86-94bf-81dd0b098f1b",
+        "Abrir Facção 🔫": "39f5bed1-db88-4e86-94bf-81dd0b098f1b",
+        "Abrir Corporação 🚨🚔": "39f5bed1-db88-4e86-94bf-81dd0b098f1b",
+    };
+
+    const key = pixKeys[productName];
+
+    // Atualiza QR Code e chave na seção PIX
+    document.getElementById('qrCode').src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(key)}&size=150x150`;
+    document.getElementById('pixKey').textContent = key;
+
+    // Atualiza QR Code e chave no header
+    document.getElementById('qrHeader').src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(key)}&size=150x150`;
+    document.getElementById('pixKeyHeader').textContent = key;
+
+    // Rolar até a seção PIX
+    document.getElementById('pix').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMA - Loja Oficial</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- HEADER -->
+<header style="position: relative; width: 100%; height: 350px; background: url('banner-bma.png') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center;">
+    <h1 style="font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5);">Brasil Mundo Avançado RP</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 20px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">Loja oficial da City BMA MTA Roleplay</p>
+    <a href="#loja" style="background-color: #ffcc00; color: #000; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s ease;">Entrar na Loja</a>
+
+    <!-- QR Code Pix com botão copiar -->
+    <div style="position: absolute; bottom: 20px; right: 20px; background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.3); text-align: center;">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=CHAVE_ALEATORIA&size=150x150" alt="QR Code Pix" style="width:120px; height:120px; margin-bottom: 8px;">
+        <div>
+            <span id="pixKeyHeader" style="display:block; font-size: 0.9rem; margin-bottom:5px;">CHAVE_ALEATORIA</span>
+            <button onclick="copyPixHeader()" style="background-color:#ffcc00; border:none; padding:6px 12px; border-radius:6px; cursor:pointer;">Copiar Pix</button>
+        </div>
+    </div>
+</header>
+
+<script>
+function copyPixHeader() {
+    const pixKey = document.getElementById('pixKeyHeader').textContent;
+    navigator.clipboard.writeText(pixKey).then(() => {
+        alert('Chave Pix copiada para a área de transferência!');
+    }).catch(err => {
+        alert('Erro ao copiar a chave Pix.');
+    });
+}
+</script>
+
+
+<!-- MENU -->
+<nav>
+    <ul>
+        <li><a href="#loja">Loja</a></li>
+        <li><a href="#discord">Discord</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#pix">Comprar VIP</a></li>
+    </ul>
+</nav>
+
+<!-- LOJA -->
+<section id="loja">
+    <h2>Planos Disponíveis</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>VIP Bronze</h3>
+            <p>Acesso premium + bônus de dinheiro</p>
+            <span class="price">R$ 10,00</span>
+            <button onclick="buy('VIP Bronze', 10)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>VIP Diamante</h3>
+            <p>Itens exclusivos + tag + comandos especiais</p>
+            <span class="price">R$ 35,00</span>
+            <button onclick="buy('VIP Diamante', 35)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>FACÇÃO</h3>
+            <p>Criação e registro de facção personalizada</p>
+            <span class="price">R$ 50,00</span>
+            <button onclick="buy('Facção', 50)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>CORPORAÇÃO</h3>
+            <p>Corp registrada + sistema interno + tag</p>
+            <span class="price">R$ 65,00</span>
+            <button onclick="buy('Corporação', 65)">Comprar</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- PIX SECTION -->
+<section id="pix">
+    <h2>Pagamento via PIX</h2>
+    <p>Após selecionar um produto, o QR Code aparecerá aqui:</p>
+
+    <div id="qrBox" class="qr-box">
+        <img id="qrCode" src="39f5bed1-db88-4e86-94bf-81dd0b098f1b" alt="QR Code PIX aparecerá aqui">
+    </div>
+
+    <p id="pixKey" class="pix-key"></p>
+</section>
+
+<!-- DISCORD -->
+<section id="discord">
+    <h2>Discord Oficial</h2>
+    <p>Entre na comunidade do servidor:</p>
+    <a href="https://discord.gg/p5WqdF9KaY" class="btn" target="_blank">Entrar no Discord</a>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <h2>Contato</h2>
+    <p>E-mail: <strong>contato@bmamta.com</strong></p>
+</section>
+
+<footer>
+    <p>© 2025 - BMA | Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

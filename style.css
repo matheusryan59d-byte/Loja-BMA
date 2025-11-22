@@ -1,0 +1,175 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== FUNDO GLOBAL ===== */
+body {
+    background: radial-gradient(circle at top, #0f0f27, #05050f);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(10, 10, 30, 0.7);
+    border-bottom: 3px solid #4b00ff;
+    box-shadow: 0 0 15px #4b00ff;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #58a6ff;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+/* ===== BOTÃO PRINCIPAL ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #6200ff, #00d9ff);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: .3s;
+    box-shadow: 0 0 10px #6200ff;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00d9ff;
+}
+
+/* ===== MENU ===== */
+nav {
+    backdrop-filter: blur(10px);
+    background: rgba(15, 15, 35, 0.6);
+    padding: 15px;
+    border-bottom: 2px solid #00d9ff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #dadeff;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+/* ===== SESSÕES ===== */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00d9ff;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(20, 20, 40, 0.9);
+    border: 2px solid #6200ff;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    transition: .3s;
+    box-shadow: 0 0 10px rgba(98, 0, 255, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #6200ff;
+}
+
+.card h3 {
+    color: #58a6ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+/* PREÇO */
+.price {
+    display: block;
+    margin: 15px 0;
+    font-size: 26px;
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+/* BOTÃO DE COMPRA */
+button {
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, #00d9ff, #6200ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 0 15px #00d9ff;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #6200ff;
+}
+
+/* ===== PIX BOX ===== */
+.qr-box img {
+    border: 4px solid #00d9ff;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #00d9ff;
+}
+
+/* PIX TEXTO */
+.pix-key {
+    color: #00ffea;
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(5, 5, 15, 0.8);
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 2px solid #00d9ff;
+    text-align: center;
+    box-shadow: 0 0 15px #6200ff;
+}
+
+footer p {
+    color: #9bb0ff;
+}
